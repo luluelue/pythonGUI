@@ -77,11 +77,18 @@ if __name__ == '__main__':
 
 
     def usr_login():
-        print(var_usr_name.get())
+        userName = var_usr_name.get()
+        print("用户名：{}".format(userName))
+        tk.messagebox.showinfo(title='Welcome', message='How are you? ' + userName)
+
 
 
     def usr_sign_up():
-        print(var_usr_pwd.get())
+        pwd = var_usr_pwd.get()
+        print("用户名：{}".format(pwd))
+        res = tk.messagebox.askyesno('Welcome',
+                               'You have not sign up yet. Sign up today?')
+        print("result:{}".format(res))
 
 
     # login and sign up button
